@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="../node_modules/font-awesome/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer-guard">
+      <% stories.forEach(function(story){ %>
+      <div class="spacey-card">
+        <h4>Countries: 🗺  <%= story.Combined_Key %></h4> 
+        <ul>
+          <li>
+            Confirmed Cases 🌐 
+            <%= story.Confirmed %>
+          </li>
+          <li>Active Cases 🧷 <%= story.Active %></li>
+          <li>Recoveries 🕗  <%= story.Recovered %></li>
+          <li>No. of Deaths &#x1F480; <%= story.Deaths %></li>
+        </ul>
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
